@@ -1,3 +1,4 @@
+# MAC Limit
 
 1. Set recovery timeout for MAC limiting
 
@@ -44,6 +45,8 @@ show ethernet-switching interface ge-0/0/9
 clear ethernet-switching recovery-timeout interface ge-0/0/9
 ```
 
+# Sticky MAC (persistent MAC learning)
+
 1. Clear sticky MAC (persistent MAC learning)
 
 ```
@@ -61,6 +64,8 @@ set interface ge-0/0/9 persistent-learning
 ```
 show ethernet-switching table
 ```
+
+# Storm Control
 
 1. Configure storm control (in kbps)
 
