@@ -15,13 +15,16 @@ set interfaces ge-0/0/6 unit 0 accept-source-mac { mac-address 00:26:88:02:74:85
 1. Set limiting actions
 
 ```
-set switch-options interface ge-0/0/7.0 interface-mac-limit 2 
+set switch-options interface ge-0/0/7.0 interface-mac-limit 2
 set switch-options interface ge-0/0/7.0 interface-mac-limit packet-action log
 
 set vlans default vlan-id 1
 set vlans default switch-options interface-mac-limit 3
 set vlans default switch-options interface-mac-limit packet-action drop-and-log;
 ```
+
+[Actions for MAC Limiting and MAC Move Limiting](https://www.juniper.net/documentation/us/en/software/junos/security-services/topics/concept/port-security-mac-limiting-and-mac-move-limiting.html#understanding-mac-limiting-and-mac-move-limiting__d5324e101)
+
 
 1. Set MAC move limit. MAC allowed to move once within 1 second within VLAN
 
@@ -88,3 +91,4 @@ clear ethernet-switching recovery-timeout
 show ethernet-switching interface ge-0/0/9
 ```
 
+[Example: Using Storm Control to Prevent Network Outages](https://www.juniper.net/documentation/us/en/software/junos/security-services/topics/topic-map/using-storm-control-to-prevent-network-outages.html)
